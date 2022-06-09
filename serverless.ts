@@ -1,8 +1,6 @@
 import type { AWS } from '@serverless/typescript';
 
-import careers from '@functions/careers';
 import persons from '@functions/persons';
-import courses from '@functions/courses';
 
 const serverlessConfiguration: AWS = {
   service: 'newbie-aws',
@@ -21,7 +19,7 @@ const serverlessConfiguration: AWS = {
       NODE_OPTIONS: '--enable-source-maps --stack-trace-limit=1000',
     },
   },
-  functions: { careers, persons, courses},
+  functions: { persons },
   package: { individually: true },
   custom: {
     esbuild: {
